@@ -42,7 +42,6 @@ def upload_file(file_stream):
                 media_body=media).execute()
             logging.info(f"Sales Data file has been uploaded successfully.")
     
-    
 def upload_log():
     DRIVER_SERVICE = authenticate()
     log_stream.seek(0) 
