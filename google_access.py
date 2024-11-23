@@ -2,6 +2,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
 from google.oauth2 import service_account
 import os, logging, io
+import json
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -15,7 +16,7 @@ logging.basicConfig(level=logging.CRITICAL,
 load_dotenv()
 
 SCOPES = ["https://www.googleapis.com/auth/drive"]
-SERVICE_ACC_FILE = "service_account.json"
+SERVICE_ACC_FILE = json.loads(os.getenv("SERVICE_ACC"))
 FOLDER_ID = os.getenv("FOLDER_ID")
 LOG_ID = os.getenv("LOG_ID")
 
