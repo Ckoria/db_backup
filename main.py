@@ -4,4 +4,4 @@ import time
 if __name__ == "__main__":
     while True:
         download_file()
-        time.sleep(36060 * 5)
+        time.sleep(3 * 5)
