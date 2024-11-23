@@ -17,9 +17,9 @@ load_dotenv()
 
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 SERVICE_ACC_FILE = json.loads(os.getenv("SERVICE_ACC"))
-FOLDER_ID = os.getenv("FOLDER_ID")
 LOG_ID = os.getenv("LOG_ID")
-
+FOLDER_ID = os.getenv("FOLDER_ID")
+print(SERVICE_ACC_FILE["type"])
 def authenticate():
     creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACC_FILE, scopes= SCOPES)
